@@ -18,11 +18,14 @@
         let interest_period = $("#interest_period").val();
         let money_per_period = $("#money_per_period").val() * 1;
         let deposit_years = $("#deposit_years").val() * 1;
-        console.log(principal, interest, interest_period, money_per_period, deposit_years);
+        let stop_money_years = $("#stop_money_years").val() * 1
+
+        console.log(principal, interest, interest_period, money_per_period, deposit_years, stop_money_years);
 
 
         let calculat_interest = interest_period === 'month' ? (interest/12).toFixed(6) : interest;
         let period_times = interest_period === 'month' ? deposit_years * 12 : deposit_years;
+        let stop_money_period = interest_period === 'month' ? stop_money_years * 12 : stop_money_years;
 
         let total_money = principal;
         let total_principal_money = principal;
@@ -44,8 +47,10 @@
           result_html += "</tr>";
           $("#result tbody").append(result_html);
 
-          total_money += money_per_period;
-          total_principal_money += money_per_period;
+          if (stop_money_period < 0 || i < stop_money_period){
+            total_money += money_per_period;
+            total_principal_money += money_per_period;
+          }    
         }
       }
 
@@ -69,7 +74,7 @@
               <input type="number" class="form-control" value="1000000" id="principal" name="principal" min="1">
             </div>
             <div class="form-group">
-              <label for="interest">年利息</label>
+              <label for="interest">年利率</label>
               <select class="form-control" id="interest">
                 <option value="0.01">1%</option>
                 <option value="0.02">2%</option>
@@ -81,18 +86,74 @@
                 <option value="0.08">8%</option>
                 <option value="0.09">9%</option>
                 <option value="0.1">10%</option>
+                <option value="0.11">11%</option>
+                <option value="0.12">12%</option>
+                <option value="0.13">13%</option>
+                <option value="0.14">14%</option>
+                <option value="0.15">15%</option>
+                <option value="0.16">16%</option>
+                <option value="0.17">17%</option>
+                <option value="0.18">18%</option>
+                <option value="0.19">19%</option>
+                <option value="0.2">20%</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="interest_period">複利頻率</label>
+              <label for="interest_period">每週期複利</label>
               <select class="form-control" id="interest_period">
                 <option value="month">每月</option>
                 <option value="year">每年</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="money_per_period">每頻率再投入金額</label>
+              <label for="money_per_period">每週期再投入金額</label>
               <input type="number" class="form-control" value="50000" id="money_per_period" name="money_per_period" min="1">
+            </div>
+            <div class="form-group">
+              <label for="stop_money_years">停止週期再投入</label>
+              <select class="form-control" id="stop_money_years">
+                <option value="-1">不停止</option>
+                <option value="1">1年後</option>
+                <option value="2">2年後</option>
+                <option value="3">3年後</option>
+                <option value="4">4年後</option>
+                <option value="5">5年後</option>
+                <option value="6">6年後</option>
+                <option value="7">7年後</option>
+                <option value="8">8年後</option>
+                <option value="9">9年後</option>
+                <option value="10">10年後</option>
+                <option value="11">11年後</option>
+                <option value="12">12年後</option>
+                <option value="13">13年後</option>
+                <option value="14">14年後</option>
+                <option value="15">15年後</option>
+                <option value="16">16年後</option>
+                <option value="17">17年後</option>
+                <option value="18">18年後</option>
+                <option value="19">19年後</option>
+                <option value="20">20年後</option>
+                <option value="21">21年後</option>
+                <option value="22">22年後</option>
+                <option value="23">23年後</option>
+                <option value="24">24年後</option>
+                <option value="25">25年後</option>
+                <option value="26">26年後</option>
+                <option value="27">27年後</option>
+                <option value="28">28年後</option>
+                <option value="29">29年後</option>
+                <option value="30">30年後</option>
+                <option value="31">31年後</option>
+                <option value="32">32年後</option>
+                <option value="33">33年後</option>
+                <option value="34">34年後</option>
+                <option value="35">35年後</option>
+                <option value="36">36年後</option>
+                <option value="37">37年後</option>
+                <option value="38">38年後</option>
+                <option value="39">39年後</option>
+                <option value="40">40年後</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="deposit_years">計算年份</label>

@@ -1,0 +1,59 @@
+{
+    "Button": {
+        "RequestQuote": "Request Your Quote"
+    },
+    "FormHeader": {
+        "BoldedText": "Contact us NOW for a Quote:",
+        "OtherText": "Please provide as much detail as possible so we can provide you with the best possible service."
+    },
+    "Label": {
+        "Company": "Company:*",
+        "DestinationCity": "Destination City:",
+        "Email": "Email:*",
+        "Height": "Height:",
+        "HowHeardAbout": "How did you hear about us?",
+        "Length": "Length:",
+        "Name": "Name:*",
+        "OriginCity": "Origin City:",
+        "ProductNameOrFreightDescription": "Product Name or Freight Description:",
+        "SpecialInstructions": "Special Instructions:",
+        "Telephone": "Telephone:*",
+        "UploadInstructions": "Upload supporting files (packing list, photos, etc.) to help us expedite your quote.",
+        "Weight": "Weight:",
+        "Width": "Width:",
+        "TermsOfService": "I have read and agree to the <a href=\"/Home/TermsOfService\" target=\"_blank\">Terms of Service</a>",
+        "PrivacyPolicy": "I have read and agree to the site's <a href=\"/Home/Privacy\" target=\"_blank\">Privacy Policy</a>",
+        "JunoLogisticsNews": "Subscribe to <b>Juno Logistics News</b> for more information."
+    },
+    "PlaceHolder": {
+        "DropFilesHere": "Drop files here to upload"
+    },
+    "SectionHeader": {
+        "CargoInformation": "Cargo Information:",
+        "Dimensions": "Dimensions (if known):"
+    },
+    "SelectOption": {
+        "Feet": "ft",
+        "Kilograms": "kg",
+        "Metres": "m",
+        "Pounds": "lbs"
+    },
+    "SuccessMessage": {
+        "Button": "OK",
+        "Text": "Your request was sent",
+        "Title": "Thank you"
+    },
+    "ErrorMessage": {
+        "Button": "OK",
+        "Text": "Your request could not be sent",
+        "Title": "Error"
+    },
+    "TermsOfServiceLink": {
+        "Link": "Terms of Service",
+        "NormalText": "By clicking \"Request Your Quote\", you agree to the "
+    },
+    "Validation": {
+        "Required": "This field is required",
+        "Email": "Please enter a valid email address"
+    }
+}

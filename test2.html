@@ -254,9 +254,7 @@
 <script>
     i18next
         .use(i18nextXHRBackend)
-        .init({}, function (err, t) {
-            i18next.changeLanguage($("#LanguageSelect option:selected").val());
-        });
+        .init();
 
 </script>
 

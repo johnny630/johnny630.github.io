@@ -50,5 +50,194 @@
             </nav>
         </div>
     </header>
+
+    <div class="container">
+        
+
+    <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
+        This site uses cookies for analytics and multi-language support. <a href="/Home/Privacy">Learn More</a>.
+        <button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string=".AspNet.Consent=yes; expires=Tue, 12 May 2020 06:13:08 GMT; path=/; samesite=lax">
+            <span aria-hidden="true">Accept</span>
+        </button>
+    </div>
+    <script>
+        (function () {
+            var button = document.querySelector("#cookieConsent button[data-cookie-string]");
+            button.addEventListener("click", function (event) {
+                document.cookie = button.dataset.cookieString;
+            }, false);
+        })();
+    </script>
+
+        <main role="main" class="pb-3">
+            
+<div class="row">
+    <div class="col-md-6">
+
+        <section id="InformationSection">
+            <img id="Image-ProjectCargoWords" src="/images/ProjectCargo_words.svg" class="img-fluid" />
+            <h3 id="InformationSubHeader"></h3>
+            <p id="InformationParagraph"></p>
+            <img id="Image-ProjectCargoCrane" class="img-fluid" src="/images/ProjCarg_Logo_wordspace_clear.svg" />
+        </section>
+    </div>
+    <div class="col-md-6">
+        <section id="FormSection">
+            <form id="FormSection1" action="">
+                <p>
+                    <b id="FormHeader-BoldedText"></b>
+                    <span id="FormHeader-OtherText"></span>
+                </p>
+                <div class="form-group">
+                    <label form="DropzoneSection" id="FormLabel-Name" for="Name">Name</label>
+                    <input required class="form-control i18n_required form-control-sm" type="text" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" value="" />
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-Company" for="Company">Company</label>
+                    <input required class="form-control i18n_required form-control-sm" type="text" data-val="true" data-val-required="The Company field is required." id="Company" name="Company" value="" />
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-Email" for="Email">Email</label>
+                    <input type="email" required class="form-control form-control-sm i18n_required i18n_email" data-val="true" data-val-required="The Email field is required." id="Email" name="Email" value="" />
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-Telephone" for="Telephone">Telephone</label>
+                    <input required class="form-control form-control-sm" type="text" data-val="true" data-val-required="The Telephone field is required." id="Telephone" name="Telephone" value="" />
+                </div>
+                <b id="FormSectionHeader-CargoInformation"> Cargo Information:</b>
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label id="FormLabel-OriginCity" for="OriginCity">OriginCity</label>
+                        <input class="form-control form-control-sm" type="text" id="OriginCity" name="OriginCity" value="" />
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label id="FormLabel-DestinationCity" for="DestinationCity">DestinationCity</label>
+                        <input class="form-control form-control-sm" type="text" id="DestinationCity" name="DestinationCity" value="" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-ProductNameOrFreightDescription" for="ProductNameOrFreightDescription">ProductNameOrFreightDescription</label>
+                    <input class="form-control form-control-sm" type="text" id="ProductNameOrFreightDescription" name="ProductNameOrFreightDescription" value="" />
+                </div>
+                <b id="FormSectionHeader-Dimensions"> Dimensions (if known)</b>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="form-group col-7">
+                                <label id="FormLabel-Length" for="Length">Length</label>
+                                <input type="number" class="form-control form-control-sm" data-val="true" data-val-number="The field Length must be a number." id="Length" name="Length" value="" />
+                            </div>
+
+                            <div class="form-group col-5">
+                                <label class="invisible" for="LengthUnit">Unit</label>
+                                <select class="form-control form-control-sm" id="LengthUnit" name="LengthUnit">
+                                    <option value="m" class="Metres"></option>
+                                    <option value="ft" class="Feet"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="form-group col-7">
+                                <label id="FormLabel-Width" for="Width">Width</label>
+                                <input type="number" class="form-control form-control-sm" data-val="true" data-val-number="The field Width must be a number." id="Width" name="Width" value="" />
+                            </div>
+                            <div class="form-group col-5">
+                                <label class="invisible" for="WidthUnit">Unit</label>
+                                <select class="form-control form-control-sm" id="WidthUnit" name="WidthUnit">
+                                    <option value="m" class="Metres"></option>
+                                    <option value="ft" class="Feet"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="form-group col-7">
+                                <label id="FormLabel-Height" for="Height">Height</label>
+                                <input type="number" class="form-control form-control-sm" data-val="true" data-val-number="The field Height must be a number." id="Height" name="Height" value="" />
+                            </div>
+                            <div class="form-group col-5">
+                                <label class="invisible" for="HeightUnit">Unit</label>
+                                <select class="form-control form-control-sm" id="HeightUnit" name="HeightUnit">
+                                    <option value="m" class="Metres"></option>
+                                    <option value="ft" class="Feet"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="form-group col-7">
+                                <label id="FormLabel-Weight" for="Weight">Weight</label>
+                                <input type="number" class="form-control form-control-sm" data-val="true" data-val-number="The field Weight must be a number." id="Weight" name="Weight" value="" />
+                            </div>
+                            <div class="form-group col-5">
+                                <label class="invisible" for="WeightUnit">Unit</label>
+                                <select class="form-control form-control-sm" id="WeightUnit" name="WeightUnit">
+                                    <option value="kg" class="Kilograms"></option>
+                                    <option value="lbs" class="Pounds"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-SpecialInstructions" for="SpecialInstructions">SpecialInstructions</label>
+                    <textarea class="form-control form-control-sm" id="SpecialInstructions" name="SpecialInstructions">
+</textarea>
+                </div>
+
+
+
+
+            </form>
+            <div id="FormLabel-UploadInstructions">Upload supporting files (packing list, photos, etc.) to help us expedite your quote.</div>
+
+            <form class="dropzone" id="DropzoneSection" method="post" action="/Home/RequestQuote"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8PjXor8PAt9Ig52lUnKV1f0ABG_i2THTVNkKSAjiCNpl3rgc8p03eyOBsw_AEfIoSgZz0PQhIIst7Qg96iADbzC1WfpzenLaewmC5Mr6bDDXW6_NdB0JjDT4cqlA7ewujb3yoO88EGJo4y9X8lAj3Go" /></form>
+            <form id="FormSection2">
+                <div class="form-group">
+                    <label id="FormLabel-HowHeardAbout" for="HowHeardAbout">HowHeardAbout</label>
+                    <input class="form-control form-control-sm" type="text" id="HowHeardAbout" name="HowHeardAbout" value="" />
+                </div>
+
+                <div class="form-group">
+                    <input i18n_required required type="checkbox" data-val="true" data-val-required="The TermsOfServiceConsent field is required." id="TermsOfServiceConsent" name="TermsOfServiceConsent" value="true" />
+                    <span class="i18n_html" data-i18n_html="form:Label.TermsOfService"></span> * <a id="" target="_blank" href="/Home/TermsOfService"><i class="fal fa-lg fa-info-circle"></i></a>
+                    <label class="error" for="TermsOfServiceConsent"></label>
+
+                </div>
+                <div class="form-group">
+                    <input class="i18n_required" required type="checkbox" data-val="true" data-val-required="The PrivacyPolicyConsent field is required." id="PrivacyPolicyConsent" name="PrivacyPolicyConsent" value="true" />
+                    <span class="i18n_html" data-i18n_html="form:Label.PrivacyPolicy"></span>  * <a id="" target="_blank" href="/Home/Privacy"><i class="fal fa-lg fa-info-circle"></i></a>
+                    <label class="error" for="PrivacyPolicyConsent"></label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" data-val="true" data-val-required="The OptForMarketing field is required." id="OptForMarketing" name="OptForMarketing" value="true" />
+                    <span class="i18n_html" data-i18n_html="form:Label.JunoLogisticsNews">
+                </div>
+            <input name="TermsOfServiceConsent" type="hidden" value="false" /><input name="PrivacyPolicyConsent" type="hidden" value="false" /><input name="OptForMarketing" type="hidden" value="false" /></form>
+            <div class="text-center"><button type="button" id="FormButton-RequestQuote" class="btn btn-outline-light">Request Your Quote</button></div>
+        </section>
+    </div>
+</div>
+
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            <br />
+            &copy; 2019 - ProjectCargo - <a href="/Home/TermsOfService">Terms of Service</a>  - <a href="/Home/Privacy">Privacy</a>
+            <br />
+            <br />
+        </div>
+    </footer>
+
+
+
 </body>
 </html>

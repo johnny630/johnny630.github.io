@@ -1,55 +1,270 @@
+
+<!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/8.1.0/i18next.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.0/jquery-i18next.min.js" ></script>
-    <!-- <script src="/jquery-i18next.min.js" ></script> -->
-  </head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - ProjectCargo</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=ZwtYkP3eSREnb3A04hCC2sn7ni81LKlBIRqbMl5TWjQ" />
+</head>
+<body>
+    <header>
 
-  <body>
+        <div class="container">
+            <div id="TopHeader" class="row">
+                <div class="col-md-6 ">
+                    <a href="/"><img id="Image-JunoVertical" class="float-md-left d-block m-auto" src="/images/Juno logo_vert.svg" /></a>
+                </div>
+                <div class="col-md-1">
+                    <img id="Image-HardHat" class="m-auto d-block" src="/images/HardHat_w_ProjCargo.svg" />
+                </div>
+                <div class="col-md-5 text-center">
+                    <i class="float-md-left " id="HardHatText"> It&#39;s the person under the hardhat that makes the difference</i>
+                </div>
 
-    <ul class="nav">
-      <li><a href="#" data-i18n="nav.home">1</a></li>
-      <li><a href="#" data-i18n="nav.page1">2</a></li>
-      <li><a href="#" data-i18n="nav.page2">3</a></li>
-    </ul>
+            </div>
+            <img id="Image-TruckBanner" src="/images/JunoHeavyHaul_HeroImage.jpg" class="img-fluid" />
+            <nav class="text-center" id="NavBar">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div id="Navbar-Telephone">630.735.0205</div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div id="Navbar-Email">info@junoheavyhaul.com</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="NavBar-Language">
+    <label for="LanguageSelect">
+        <i class="far fa-globe"></i>
+    </label>
+    <select id="LanguageSelect">
+    <option selected="selected" value="english">English</option>
+<option value="japanese">&#x65E5;&#x672C;&#x8A9E;</option>
+</select>
+</div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <div class="content">
-      <input data-i18n="[placeholder]input.placeholder; [title]input.placeholder" />
+    <div class="container">
+        
+
+    <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
+        This site uses cookies for analytics and multi-language support. <a href="/Home/Privacy">Learn More</a>.
+        <button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string=".AspNet.Consent=yes; expires=Tue, 12 May 2020 06:13:08 GMT; path=/; samesite=lax">
+            <span aria-hidden="true">Accept</span>
+        </button>
     </div>
-
-    <script defer src="https://pro.fontawesome.com/releases/v5.6.3/js/all.js"></script>
-
     <script>
-      // use plugins and options as needed, for options, detail see
-      // http://i18next.com/docs/
-      i18next.init({
-        lng: 'en', // evtl. use language-detector https://github.com/i18next/i18next-browser-languageDetector
-        resources: { // evtl. load via xhr https://github.com/i18next/i18next-xhr-backend
-          en: {
-            translation: {
-              input: {
-                placeholder: "a placeholder"
-              },
-              nav: {
-                home: 'Home',
-                page1: 'Page One',
-                page2: 'Page Two'
-              }
-            }
-          }
-        }
-      }, function(err, t) {
-        // for options see
-        // https://github.com/i18next/jquery-i18next#initialize-the-plugin
-        jqueryI18next.init(i18next, $);
-        // start localizing, details:
-        // https://github.com/i18next/jquery-i18next#usage-of-selector-function
-        $('.nav').localize();
-        $('.content').localize();
-      });
+        (function () {
+            var button = document.querySelector("#cookieConsent button[data-cookie-string]");
+            button.addEventListener("click", function (event) {
+                document.cookie = button.dataset.cookieString;
+            }, false);
+        })();
     </script>
 
-  </body>
+        <main role="main" class="pb-3">
+            
+<div class="row">
+    <div class="col-md-6">
 
+        <section id="InformationSection">
+            <img id="Image-ProjectCargoWords" src="/images/ProjectCargo_words.svg" class="img-fluid" />
+            <h3 id="InformationSubHeader"></h3>
+            <p id="InformationParagraph"></p>
+            <img id="Image-ProjectCargoCrane" class="img-fluid" src="/images/ProjCarg_Logo_wordspace_clear.svg" />
+        </section>
+    </div>
+    <div class="col-md-6">
+        <section id="FormSection">
+            <form id="FormSection1" action="">
+                <p>
+                    <b id="FormHeader-BoldedText"></b>
+                    <span id="FormHeader-OtherText"></span>
+                </p>
+                <div class="form-group">
+                    <label form="DropzoneSection" id="FormLabel-Name" for="Name">Name</label>
+                    <input required class="form-control i18n_required form-control-sm" type="text" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" value="" />
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-Company" for="Company">Company</label>
+                    <input required class="form-control i18n_required form-control-sm" type="text" data-val="true" data-val-required="The Company field is required." id="Company" name="Company" value="" />
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-Email" for="Email">Email</label>
+                    <input type="email" required class="form-control form-control-sm i18n_required i18n_email" data-val="true" data-val-required="The Email field is required." id="Email" name="Email" value="" />
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-Telephone" for="Telephone">Telephone</label>
+                    <input required class="form-control form-control-sm" type="text" data-val="true" data-val-required="The Telephone field is required." id="Telephone" name="Telephone" value="" />
+                </div>
+                <b id="FormSectionHeader-CargoInformation"> Cargo Information:</b>
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label id="FormLabel-OriginCity" for="OriginCity">OriginCity</label>
+                        <input class="form-control form-control-sm" type="text" id="OriginCity" name="OriginCity" value="" />
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label id="FormLabel-DestinationCity" for="DestinationCity">DestinationCity</label>
+                        <input class="form-control form-control-sm" type="text" id="DestinationCity" name="DestinationCity" value="" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-ProductNameOrFreightDescription" for="ProductNameOrFreightDescription">ProductNameOrFreightDescription</label>
+                    <input class="form-control form-control-sm" type="text" id="ProductNameOrFreightDescription" name="ProductNameOrFreightDescription" value="" />
+                </div>
+                <b id="FormSectionHeader-Dimensions"> Dimensions (if known)</b>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="form-group col-7">
+                                <label id="FormLabel-Length" for="Length">Length</label>
+                                <input type="number" class="form-control form-control-sm" data-val="true" data-val-number="The field Length must be a number." id="Length" name="Length" value="" />
+                            </div>
+
+                            <div class="form-group col-5">
+                                <label class="invisible" for="LengthUnit">Unit</label>
+                                <select class="form-control form-control-sm" id="LengthUnit" name="LengthUnit">
+                                    <option value="m" class="Metres"></option>
+                                    <option value="ft" class="Feet"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="form-group col-7">
+                                <label id="FormLabel-Width" for="Width">Width</label>
+                                <input type="number" class="form-control form-control-sm" data-val="true" data-val-number="The field Width must be a number." id="Width" name="Width" value="" />
+                            </div>
+                            <div class="form-group col-5">
+                                <label class="invisible" for="WidthUnit">Unit</label>
+                                <select class="form-control form-control-sm" id="WidthUnit" name="WidthUnit">
+                                    <option value="m" class="Metres"></option>
+                                    <option value="ft" class="Feet"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="form-group col-7">
+                                <label id="FormLabel-Height" for="Height">Height</label>
+                                <input type="number" class="form-control form-control-sm" data-val="true" data-val-number="The field Height must be a number." id="Height" name="Height" value="" />
+                            </div>
+                            <div class="form-group col-5">
+                                <label class="invisible" for="HeightUnit">Unit</label>
+                                <select class="form-control form-control-sm" id="HeightUnit" name="HeightUnit">
+                                    <option value="m" class="Metres"></option>
+                                    <option value="ft" class="Feet"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="form-group col-7">
+                                <label id="FormLabel-Weight" for="Weight">Weight</label>
+                                <input type="number" class="form-control form-control-sm" data-val="true" data-val-number="The field Weight must be a number." id="Weight" name="Weight" value="" />
+                            </div>
+                            <div class="form-group col-5">
+                                <label class="invisible" for="WeightUnit">Unit</label>
+                                <select class="form-control form-control-sm" id="WeightUnit" name="WeightUnit">
+                                    <option value="kg" class="Kilograms"></option>
+                                    <option value="lbs" class="Pounds"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label id="FormLabel-SpecialInstructions" for="SpecialInstructions">SpecialInstructions</label>
+                    <textarea class="form-control form-control-sm" id="SpecialInstructions" name="SpecialInstructions">
+</textarea>
+                </div>
+
+
+
+
+            </form>
+            <div id="FormLabel-UploadInstructions">Upload supporting files (packing list, photos, etc.) to help us expedite your quote.</div>
+
+            <form class="dropzone" id="DropzoneSection" method="post" action="/Home/RequestQuote"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8PjXor8PAt9Ig52lUnKV1f0ABG_i2THTVNkKSAjiCNpl3rgc8p03eyOBsw_AEfIoSgZz0PQhIIst7Qg96iADbzC1WfpzenLaewmC5Mr6bDDXW6_NdB0JjDT4cqlA7ewujb3yoO88EGJo4y9X8lAj3Go" /></form>
+            <form id="FormSection2">
+                <div class="form-group">
+                    <label id="FormLabel-HowHeardAbout" for="HowHeardAbout">HowHeardAbout</label>
+                    <input class="form-control form-control-sm" type="text" id="HowHeardAbout" name="HowHeardAbout" value="" />
+                </div>
+
+                <div class="form-group">
+                    <input i18n_required required type="checkbox" data-val="true" data-val-required="The TermsOfServiceConsent field is required." id="TermsOfServiceConsent" name="TermsOfServiceConsent" value="true" />
+                    <span class="i18n_html" data-i18n_html="form:Label.TermsOfService"></span> * <a id="" target="_blank" href="/Home/TermsOfService"><i class="fal fa-lg fa-info-circle"></i></a>
+                    <label class="error" for="TermsOfServiceConsent"></label>
+
+                </div>
+                <div class="form-group">
+                    <input class="i18n_required" required type="checkbox" data-val="true" data-val-required="The PrivacyPolicyConsent field is required." id="PrivacyPolicyConsent" name="PrivacyPolicyConsent" value="true" />
+                    <span class="i18n_html" data-i18n_html="form:Label.PrivacyPolicy"></span>  * <a id="" target="_blank" href="/Home/Privacy"><i class="fal fa-lg fa-info-circle"></i></a>
+                    <label class="error" for="PrivacyPolicyConsent"></label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" data-val="true" data-val-required="The OptForMarketing field is required." id="OptForMarketing" name="OptForMarketing" value="true" />
+                    <span class="i18n_html" data-i18n_html="form:Label.JunoLogisticsNews">
+                </div>
+            <input name="TermsOfServiceConsent" type="hidden" value="false" /><input name="PrivacyPolicyConsent" type="hidden" value="false" /><input name="OptForMarketing" type="hidden" value="false" /></form>
+            <div class="text-center"><button type="button" id="FormButton-RequestQuote" class="btn btn-outline-light">Request Your Quote</button></div>
+        </section>
+    </div>
+</div>
+
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            <br />
+            &copy; 2019 - ProjectCargo - <a href="/Home/TermsOfService">Terms of Service</a>  - <a href="/Home/Privacy">Privacy</a>
+            <br />
+            <br />
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/15.0.1/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-xhr-backend@2.0.1/i18nextXHRBackend.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+    <script defer src="https://pro.fontawesome.com/releases/v5.6.3/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+
+<script>
+    i18next
+        .use(i18nextXHRBackend)
+        .init({
+            fallbackLng: 'english', 
+            ns: ['form'],
+            debug: true,
+            backend: {
+                loadPath: '/translations/{{lng}}/{{ns}}.json?t=850'
+            }
+        }, function (err, t) {
+            i18next.changeLanguage($("#LanguageSelect option:selected").val());
+        });
+</script>
+
+</body>
 </html>

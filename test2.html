@@ -253,7 +253,17 @@
 
 <script>
     i18next
-      .use(i18nextXHRBackend);
+        .use(i18nextXHRBackend)
+        .init({
+            fallbackLng: 'english', 
+            ns: [],
+            debug: true,
+            backend: {
+                loadPath: '/translations/{{lng}}/{{ns}}.json?t=850'
+            }
+        }, function (err, t) {
+            i18next.changeLanguage($("#LanguageSelect option:selected").val());
+        });
 </script>
 
 </body>

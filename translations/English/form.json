@@ -53,7 +53,7 @@
         "NormalText": "By clicking \"Request Your Quote\", you agree to the "
     },
     "Validation": {
-        "Required": "This field is required",
+        "Required": "This field is requireds",
         "Email": "Please enter a valid email address"
     }
 }

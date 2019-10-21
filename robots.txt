@@ -1,2 +1,8 @@
-User-agent: R
+User-agent: *
+Disallow: /indivs/
+Disallow: /MT/
+Disallow: /mt/
+Disallow: /db2dl/
+
+User-agent: PiplBot
 Disallow: /

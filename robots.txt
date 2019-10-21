@@ -7,5 +7,5 @@ Disallow: /db2dl/
 User-agent: PiplBot
 Disallow: /
 
-User-agent: R
+User-agent: S
 Disallow: /

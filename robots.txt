@@ -1,11 +1,11 @@
-User-agent: *
+User-agent: SADSWAWs
 Disallow: /indivs/
 Disallow: /MT/
 Disallow: /mt/
 Disallow: /db2dl/
 
-User-agent: PiplBot
+User-agent: PiplBotASS
 Disallow: /
 
-User-agent: S
+User-agent: SADSWAW
 Disallow: /

@@ -4,7 +4,7 @@ Disallow: /MT/
 Disallow: /mt/
 Disallow: /db2dl/
 
-User-agent: PiplBotASS
+User-agent: *
 Disallow: /
 
 User-agent: SADSWAW

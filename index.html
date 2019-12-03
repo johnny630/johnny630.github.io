@@ -1,12 +1,14 @@
 Hello World
 
-<!-- Termly Tracking Code -->
-
-<div name="termly-embed" data-id="81a2d827-c482-4dbd-8f2d-1761e280da92" data-type="iframe"></div>
-<script type="text/javascript">(function(d, s, id) {
-  var js, tjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "https://termly.tarokostaging.io/embed-policy.min.js";
-  tjs.parentNode.insertBefore(js, tjs);
-}(document, 'script', 'termly-jssdk'));</script>
+<script>
+  (function () {
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'https://termly.tarokostaging.io/embed.min.js';
+    s.id = 'e8b76ad5-8c7d-4904-a3bc-5451797d3537';
+    s.setAttribute("data-name", "termly-embed-banner");
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  })();
+</script>

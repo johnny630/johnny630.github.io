@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <object data="https://condor.depaul.edu/sjost/hci430/flash-examples/Examples1/Examples1.swf"></object>
+    <embed src="https://condor.depaul.edu/sjost/hci430/flash-examples/Examples1/Examples1.swf"></embed>
+    <script type="text/plain" data-categories="social_networking">
+    expire_days = 1; // 過期日期(天)
+    var d = new Date();
+    d.setTime(d.getTime() + (expire_days * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = "termly_test=test" + "; " + expires + '; domain=johnny630.github.io; path=/';
+    </script>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://johnny630.github.io/embed_2_36_r.min.js';
+        s.id = '75e8c195-05a5-45de-8d4b-171a122e9bd1';
+        s.setAttribute("data-name", "termly-embed-banner");
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      })();
+    </script>
+    Hello Johnny
+    <div class="video-container">
+    <iframe width="auto" height="auto" data-src="https://www.youtube.com/embed/AYCDnRMoCDY" data-categories="advertising" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </body>
+</html>

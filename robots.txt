@@ -1,2 +1,2 @@
-User-agent: Mozilla
+User-agent: Scrapy
 Disallow: /

@@ -1,2 +1,2 @@
-User-agent: Mozilla/5.0
+User-agent: *
 Disallow: /
